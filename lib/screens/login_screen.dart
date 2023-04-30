@@ -8,6 +8,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
 
+import '../widgets/buttons.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -26,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 child: Image.asset('images/eventusinfotech.png',
                    fit: BoxFit.cover,
                 ),
-              ),
+              ), //image
               SizedBox(
                 height: 1.h,
               ),
@@ -37,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                 color2: Color(0XFF94a1b2),
                 fontsize1: 10.sp,
                 fontsize2: 15.sp,
-              ),
+              ), //welcome
               SizedBox(
                 height: 3.h,
               ),
@@ -51,14 +53,18 @@ class LoginScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
+              ), //login
               SizedBox(
                 height: 4.h,
               ),
               LoginField(icon: Icon(Icons.email_rounded,
               color: Color(0xff3192cc),
               ),
-              enabled: false,
+               circularBorderValue: 10,
+                enabled: false,
+                borderWidthValue: 0,
+                color: Colors.transparent,
+                textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
                 height: 4.h,
@@ -67,30 +73,16 @@ class LoginScreen extends StatelessWidget {
                 color: Color(0xff3192cc),
               ),
               enabled: true,
+                circularBorderValue: 10,
+                borderWidthValue: 0,
+                color: Colors.transparent,
               ),
               SizedBox(
                 height: 4.h,
               ),
-              GestureDetector(
-                onTap: (){},
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Color(0xff3192cc),
-                    borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: Center(
-                    child: Text(
-                      'LOGIN',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                        color: Colors.white
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              Buttons(
+                title: 'Login',
+              ),//loginbutton
               SizedBox(
                 height: 4.h,
               ),
@@ -103,7 +95,7 @@ class LoginScreen extends StatelessWidget {
                   color2: Colors.blue,
                   fontsize2: 10.sp,
                 ),
-              ),
+              ),//forgot thing
               SizedBox(
                 height: 10.h,
               ),
@@ -114,13 +106,17 @@ class LoginScreen extends StatelessWidget {
                     onTap: ()=>Get.to(()=>RegisterScreen()),
                     child: SampleTexts(
                       text: 'Register',
+                      color: Colors.black,
+                      fontSize: 20.sp,
                     ),
                   ),
                   SampleTexts(
                     text: 'Reports',
+                    color: Colors.black,
+                    fontSize: 20.sp,
                   ),
                 ],
-              )
+              ) //register and reports
             ],
           ),
         ),
