@@ -145,7 +145,7 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
                 Buttons(
-                  title: 'Submit',
+                  title: 'Submit', onTap: () {  },
                 ),
               ],
             ),

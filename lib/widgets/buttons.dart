@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/snackbar/snackbar.dart';
 
 class Buttons extends StatelessWidget {
   final String title;
-  const Buttons({Key? key, required this.title}) : super(key: key);
+  final VoidCallback? onTap;
+   const Buttons({Key? key, required this.title, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap:onTap,
       child: Container(
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(

@@ -1,3 +1,4 @@
+import 'package:eventus_infotech/screens/check_in_screen.dart';
 import 'package:eventus_infotech/screens/register_screen.dart';
 import 'package:eventus_infotech/widgets/login_fields.dart';
 import 'package:eventus_infotech/widgets/richTexts.dart';
@@ -82,6 +83,7 @@ class LoginScreen extends StatelessWidget {
               ),
               Buttons(
                 title: 'Login',
+                onTap: ()=> Get.to(const CheckInScreen()),
               ),//loginbutton
               SizedBox(
                 height: 4.h,
