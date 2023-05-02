@@ -1,5 +1,6 @@
 import 'package:eventus_infotech/screens/check_in_screen.dart';
 import 'package:eventus_infotech/screens/register_screen.dart';
+import 'package:eventus_infotech/screens/report_page.dart';
 import 'package:eventus_infotech/widgets/login_fields.dart';
 import 'package:eventus_infotech/widgets/richTexts.dart';
 import 'package:eventus_infotech/widgets/texts.dart';
@@ -112,10 +113,13 @@ class LoginScreen extends StatelessWidget {
                       fontSize: 20.sp,
                     ),
                   ),
-                  SampleTexts(
-                    text: 'Reports',
-                    color: Colors.black,
-                    fontSize: 20.sp,
+                  GestureDetector(
+                    onTap: ()=>Get.to(const ReportScreen()),
+                    child: SampleTexts(
+                      text: 'Reports',
+                      color: Colors.black,
+                      fontSize: 20.sp,
+                    ),
                   ),
                 ],
               ) //register and reports

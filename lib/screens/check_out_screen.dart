@@ -1,7 +1,10 @@
+import 'package:eventus_infotech/screens/check_in_history_page.dart';
 import 'package:eventus_infotech/widgets/richTexts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
-
+import 'package:eventus_infotech/screens/check_in_history_page.dart';
 import '../widgets/check_in_out_buttons.dart';
 import '../widgets/texts.dart';
 
@@ -45,7 +48,7 @@ class CheckOutScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              CheckInOutButtons(icon: Icon(Icons.alarm,color: Colors.white,size: 50.sp,), text1: 'Check-out', text2: '06:30:00 pm',color: Colors.red.shade700,),
+              CheckInOutButtons(icon: Icon(Icons.alarm,color: Colors.white,size: 50.sp,), text1: 'Check-out', text2: '06:30:00 pm',color: Colors.red.shade700,onTap: ()=>Get.to(CheckInHistoryPage()),),
               SizedBox(
                 height: 4.h,
               ),
